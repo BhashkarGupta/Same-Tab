@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extension Options</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #eee;
+    }
+    #domainInput {
+      width: 70%;
+      padding: 5px;
+    }
+    #addDomain {
+      padding: 5px 10px;
+    }
+    .checkbox {
+      width: 20px;
+      height: 20px;
+    }
+    .btn {
+      padding: 5px 10px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Manage Domains</h1>
+  <input type="text" id="domainInput" placeholder="Enter domain (e.g., example.com)" />
+  <button id="addDomain">Add Domain</button>
+  <table id="domainTable">
+    <thead>
+      <tr>
+        <th>Domain</th>
+        <th>
+          Override window.open<br/>
+          <button id="checkAllOverride" class="btn">Check All</button>
+          <button id="uncheckAllOverride" class="btn">Uncheck All</button>
+        </th>
+        <th>
+          Remove target="_blank"<br/>
+          <button id="checkAllTarget" class="btn">Check All</button>
+          <button id="uncheckAllTarget" class="btn">Uncheck All</button>
+        </th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="domainList">
+      <!-- Domains will be dynamically added here -->
+    </tbody>
+  </table>
+  <script src="options.js"></script>
+</body>
+</html>

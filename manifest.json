@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Same Tab",
+  "version": "1.1",
+  "description": "Overrides window.open and removes target='_blank' from links on specified domains.",
+  "permissions": ["scripting", "activeTab", "storage", "webNavigation"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./icons/icon16.png",
+      "48": "./icons/icon48.png",
+      "128": "./icons/icon128.png"
+    }
+  }
+}
